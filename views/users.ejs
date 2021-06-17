@@ -1,0 +1,33 @@
+<%- include('includes/head.ejs') %> 
+</head>
+<body>
+
+    <%- include('includes/nav.ejs') %> 
+
+    <main>
+        <div class="container mt-4">
+            <div class="row">
+                <% if(data.length > 0) { %> 
+                    <div class="col-md-8">
+                        <h1>List Users</h1>
+                    </div>
+                    <div class="col-md-8 mt-4">
+                        <p>This is list users:</p>
+                        <ul class="list-group">
+                            <% for (let name of data){ %> 
+                            <li class="list-group-item"><%= name.name %> </li>
+                            <% } %> 
+                        </ul>
+                    </div>
+                <% } else { %> 
+                    <div class="col-md-8">
+                        <h1>List Users Empty</h1>
+                    </div>
+                <% } %> 
+            </div>
+            
+        </div>
+    </main>
+    <%- include('includes/end.ejs') %> 
+    
+    
