@@ -25,7 +25,7 @@ router.post('/add-user', (req, res, next) => {
 app.use(router)
 
 app.use((req, res, next) => {
-    res.status(404).render('404', {pageTitle: 'Not Found'})
+    res.status(404).render('404', {pageTitle: 'Not Found', path:'/not-found'})
 })
 app.listen(3000)
 
